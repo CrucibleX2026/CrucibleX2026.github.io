@@ -1,5 +1,30 @@
 {
-  "demos": [],
+  "demos": [
+    {
+      "type": "video",
+      "title": "Chess",
+      "src": "assets/videos/chess.mp4",
+      "poster": "assets/images/chess-poster.jpg",
+      "width": 2566,
+      "height": 1440
+    },
+    {
+      "type": "video",
+      "title": "Microwave",
+      "src": "assets/videos/microwave.mp4",
+      "poster": "assets/images/microwave-poster.jpg",
+      "width": 2566,
+      "height": 1440
+    },
+    {
+      "type": "video",
+      "title": "Piano",
+      "src": "assets/videos/piano.mp4",
+      "poster": "assets/images/piano-poster.jpg",
+      "width": 2566,
+      "height": 1440
+    }
+  ],
   "primitives": [],
   "static-demos": []
 }

@@ -59,6 +59,7 @@ figcaption strong { color: var(--ink); font-weight: 650; }
 .media-section { margin-top: 76px; border-top: 1px solid var(--line); padding-top: 28px; }
 .media-section h2 { margin-bottom: 28px; }
 .media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.demo-list { width: 80%; margin-inline: auto; grid-template-columns: minmax(0, 1fr); gap: 48px; }
 .media-card { min-width: 0; margin: 0; }
 .media-card img, .media-card video { display: block; width: 100%; height: auto; border-radius: 12px; background: #f4f5f7; }
 .media-card video { aspect-ratio: 16 / 9; object-fit: contain; }

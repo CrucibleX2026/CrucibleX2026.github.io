@@ -1,6 +1,6 @@
 // Populate a section only when its media are ready to publish.
 async function loadGalleries() {
-  const response = await fetch("content/media.json");
+  const response = await fetch("content/media.json", { cache: "no-cache" });
   if (!response.ok) throw new Error("Unable to load gallery content.");
   const galleries = await response.json();
   let visibleSections = 0;
@@ -16,6 +16,11 @@ async function loadGalleries() {
       card.className = "media-card";
       const media = document.createElement(item.type === "video" ? "video" : "img");
       media.src = item.src;
+      if (Number.isFinite(item.width) && item.width > 0 && Number.isFinite(item.height) && item.height > 0) {
+        media.width = item.width;
+        media.height = item.height;
+        media.style.aspectRatio = `${item.width} / ${item.height}`;
+      }
       if (item.type === "video") {
         media.controls = true;
         media.playsInline = true;

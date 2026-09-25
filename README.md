@@ -13,6 +13,8 @@ Run `python3 -m http.server 4173 --bind 127.0.0.1` from this directory, then ope
 - `assets/site.css`: responsive page styles.
 - `content/media.json`: demo videos, primitive gallery, and static demo gallery. A section becomes visible when its array contains media.
 
+The demo videos appear in the order Chess, Microwave, Piano. They are stacked vertically, centered at 80% of the content width. The MP4 files use fast-start metadata for progressive playback, with preview images under `assets/images/`.
+
 Add media files under `assets/` and populate the corresponding array. For example:
 
 ```json
@@ -25,7 +27,7 @@ Add media files under `assets/` and populate the corresponding array. For exampl
 }
 ```
 
-For images, use `"type": "image"` and provide `alt` text. Video captions can be supplied through a `captions` WebVTT file path with optional `language` and `captionLabel` fields. Keep only prepared, approved media in these arrays.
+For images, use `"type": "image"` and provide `alt` text. Supply `width` and `height` to reserve the media's original aspect ratio. Video captions can be supplied through a `captions` WebVTT file path with optional `language` and `captionLabel` fields. Keep only prepared, approved media in these arrays.
 
 ## Refresh the framework figure
 
