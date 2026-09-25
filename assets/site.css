@@ -65,6 +65,8 @@ figcaption strong { color: var(--ink); font-weight: 650; }
 .media-card video { aspect-ratio: 16 / 9; object-fit: contain; }
 .media-card figcaption { margin-top: 14px; font-size: 1rem; line-height: 1.6; }
 .media-card strong { display: block; margin-bottom: 4px; }
+.demo-list .media-card figcaption { margin: 0 0 16px; }
+.demo-list .media-card strong { margin-bottom: 6px; font-size: 1.125rem; }
 .site-footer { width: min(calc(100% - 64px), var(--content-width)); margin: 68px auto 0; padding: 25px 0 32px; border-top: 1px solid var(--line); text-align: center; }
 .site-footer p { margin: 0; font-size: 0.8125rem; line-height: 1.8; color: var(--muted); }
 .site-footer a { color: #555a65; text-decoration-color: #c4c7ce; }

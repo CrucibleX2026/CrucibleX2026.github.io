@@ -3,6 +3,7 @@
     {
       "type": "video",
       "title": "Chess",
+      "caption": "Task: You are playing the white pieces; make your move.",
       "src": "assets/videos/chess.mp4",
       "poster": "assets/images/chess-poster.jpg",
       "width": 2566,
@@ -11,6 +12,7 @@
     {
       "type": "video",
       "title": "Microwave",
+      "caption": "Task: Put the bowl into the microwave.",
       "src": "assets/videos/microwave.mp4",
       "poster": "assets/images/microwave-poster.jpg",
       "width": 2566,
@@ -19,6 +21,7 @@
     {
       "type": "video",
       "title": "Piano",
+      "caption": "Task: Press B6, F6, C6 one by one.",
       "src": "assets/videos/piano.mp4",
       "poster": "assets/images/piano-poster.jpg",
       "width": 2566,

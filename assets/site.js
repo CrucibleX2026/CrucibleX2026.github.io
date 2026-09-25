@@ -46,7 +46,11 @@ async function loadGalleries() {
       title.textContent = item.title;
       caption.append(title);
       if (item.caption) caption.append(document.createTextNode(item.caption));
-      card.append(media, caption);
+      if (id === "demos") {
+        card.append(caption, media);
+      } else {
+        card.append(media, caption);
+      }
       grid.append(card);
     }
 
