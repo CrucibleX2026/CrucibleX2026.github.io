@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Crucible: Counterfactual RLVR for Dexterous Manipulation Planners. A framework for training manipulation planners with verifiable physical feedback.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Crucible: Counterfactual RLVR for Dexterous Manipulation Planners">
+  <meta property="og:description" content="Training dexterous manipulation planners with verifiable physical feedback.">
+  <title>Crucible: Counterfactual RLVR for Dexterous Manipulation Planners</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23202228'/%3E%3Cpath d='M45 19a18 18 0 1 0 0 26' fill='none' stroke='%23ffffff' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='48' cy='14' r='5' fill='%23ca562c'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to framework overview</a>
+
+  <header class="paper-header">
+    <h1>
+      <span class="project-name">Crucible</span>
+      <span class="paper-title">Counterfactual RLVR for<br class="desktop-break"> Dexterous Manipulation Planners</span>
+    </h1>
+    <p class="paper-summary">Training manipulation planners with verifiable physical feedback.</p>
+    <nav class="section-nav" aria-label="Page sections" hidden>
+      <a href="#overview">Overview</a>
+      <a href="#demos" data-section-link="demos" hidden>Demos</a>
+      <a href="#primitives" data-section-link="primitives" hidden>Primitive gallery</a>
+      <a href="#static-demos" data-section-link="static-demos" hidden>Static demo gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="overview" class="overview section" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <h2 id="overview-title">Framework overview</h2>
+        <a class="figure-link" href="assets/crucible-overview.png" target="_blank" rel="noopener">View full-size figure <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+      </div>
+      <figure class="overview-figure">
+        <a class="figure-image-link" href="assets/crucible-overview.png" target="_blank" rel="noopener" aria-label="View the Crucible framework figure at full resolution in a new tab">
+          <img class="overview-image" src="assets/crucible-overview.png" width="1824" height="604" fetchpriority="high" alt="Crucible framework with three panels: (a) robot demonstrations train a vision–language–primitive model; (b) counterfactual branches from a saved state are physically verified to guide masked PPO updates to the Reasoner; (c) primitives compose a closed-loop microwave manipulation rollout." aria-describedby="overview-caption">
+        </a>
+        <figcaption id="overview-caption">
+          <p><strong class="caption-name">Crucible</strong> is a counterfactual RLVR framework that trains the Reasoner using verifiable physical feedback.</p>
+          <p><strong>(a)</strong> Using robot demonstrations collected through teleoperation, we train a vision–language–primitive model (VLP) to provide arm–hand targets for executing manipulation primitives. <strong>(b)</strong> During training, Crucible revisits earlier decisions in failed rollouts and compares physical outcomes of alternative calls from the same saved state. These comparisons guide masked PPO updates to the Reasoner, while the execution stack and Verifier remain fixed. <strong>(c)</strong> During rollouts, the Reasoner selects primitives using task instructions and current observations; rule-based controllers connect actions into closed-loop, long-horizon manipulation.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="demos" class="section media-section" aria-labelledby="demos-title" hidden>
+      <h2 id="demos-title">Demo videos</h2>
+      <div class="media-grid" data-gallery="demos"></div>
+    </section>
+    <section id="primitives" class="section media-section" aria-labelledby="primitives-title" hidden>
+      <h2 id="primitives-title">Primitive gallery</h2>
+      <div class="media-grid" data-gallery="primitives"></div>
+    </section>
+    <section id="static-demos" class="section media-section" aria-labelledby="static-demos-title" hidden>
+      <h2 id="static-demos-title">Static demo gallery</h2>
+      <div class="media-grid" data-gallery="static-demos"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Layout inspired by the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a> and <a href="https://nerfies.github.io/" target="_blank" rel="noopener">Nerfies</a>.</p>
+  </footer>
+</body>
+</html>
