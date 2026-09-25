@@ -38,3 +38,5 @@ This is a static site. GitHub Pages publishes the root of the `codex/crucible-ho
 ## Design reference
 
 The academic page structure is inspired by [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) and [Nerfies](https://nerfies.github.io/). The page implementation is original; the figure and caption come from the Crucible manuscript.
+
+The paper heading uses [Manrope](https://fonts.google.com/specimen/Manrope), served from this repository under the [SIL Open Font License](assets/fonts/OFL-Manrope.txt).
