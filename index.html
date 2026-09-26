@@ -11,7 +11,7 @@
   <title>Crucible: Counterfactual RLVR for Dexterous Manipulation Planners</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23202228'/%3E%3Cpath d='M45 19a18 18 0 1 0 0 26' fill='none' stroke='%23ffffff' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='48' cy='14' r='5' fill='%23ca562c'/%3E%3C/svg%3E">
   <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/site.css?v=7">
+  <link rel="stylesheet" href="assets/site.css?v=8">
   <script src="assets/site.js?v=5" defer></script>
 </head>
 <body>
@@ -24,6 +24,7 @@
     </h1>
     <nav class="section-nav" aria-label="Page sections" hidden>
       <a href="#overview">Overview</a>
+      <a href="#abstract">Abstract</a>
       <a href="#demos" data-section-link="demos" hidden>Demos</a>
       <a href="#rollouts" data-section-link="rollouts" hidden>Rollouts</a>
       <a href="#primitives" data-section-link="primitives" hidden>Primitive gallery</a>
@@ -46,6 +47,15 @@
           <p><strong>(a)</strong> Using robot demonstrations collected through teleoperation, we train a vision–language–primitive model (VLP) to provide arm–hand targets for executing manipulation primitives. <strong>(b)</strong> During training, Crucible revisits earlier decisions in failed rollouts and compares physical outcomes of alternative calls from the same saved state. These comparisons guide masked PPO updates to the Reasoner, while the execution stack and Verifier remain fixed. <strong>(c)</strong> During rollouts, the Reasoner selects primitives using task instructions and current observations; rule-based controllers connect actions into closed-loop, long-horizon manipulation.</p>
         </figcaption>
       </figure>
+    </section>
+
+    <section id="abstract" class="section abstract-section" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <div class="abstract-body">
+        <p>Combining vision-language planners with control primitives is a promising paradigm for solving complex, long-horizon robotic manipulation tasks. However, reliable execution still requires high-level planners to improve from the outcomes of their own actions, particularly when hallucinations or incorrect reasoning lead to failures. Learning from such feedback is challenging in long-horizon tasks because a primitive may appear locally correct but cause failure many steps later, while a task-level failure signal does not reveal which decision should be corrected. This lack of <em>credit assignment</em> makes planner learning inefficient.</p>
+        <p>We present <span class="caption-name">Crucible</span>, a reinforcement learning from verifiable rewards (RLVR) framework with <em>counterfactual credit assignment</em>. <span class="caption-name">Crucible</span> builds on a new vision-language-primitive (VLP) model constructed from robot demonstrations, with each primitive paired with a privileged verifier. For a failed trajectory, our counterfactual RLVR algorithm intervenes on individual primitive decisions from saved states and replays the remaining plan, identifying <em>failure-critical decisions</em> whose replacement turns failure into success. Full returns from these alternative executions define advantages for masked PPO that updates only the identified decision tokens.</p>
+        <p>Experiments on long-horizon tabletop manipulation show that counterfactual replay rescues 49.5% of eligible failures, revealing substantial actionable supervision from failed executions. In closed-loop tabletop grasping, counterfactual PPO achieves 62.38% overall success, compared with 55.45% for episode-return PPO and 56.44% for the shared SFT baseline.</p>
+      </div>
     </section>
 
     <section id="demos" class="section media-section" aria-labelledby="demos-title" hidden>
