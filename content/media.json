@@ -22,8 +22,8 @@
       "type": "video",
       "title": "Piano",
       "caption": "Task: Press B6, F6, C6 one by one.",
-      "src": "assets/videos/piano.mp4",
-      "poster": "assets/images/piano-poster.jpg",
+      "src": "assets/videos/piano.mp4?v=2",
+      "poster": "assets/images/piano-poster.jpg?v=2",
       "width": 2566,
       "height": 1440
     }
