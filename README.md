@@ -15,7 +15,7 @@ Run `python3 -m http.server 4173 --bind 127.0.0.1` from this directory, then ope
 
 The demo videos appear in the order Chess, Microwave, Piano. They are stacked vertically, centered at 80% of the content width, with each title and task description above its video. Task descriptions are transcribed from the opening frames. The MP4 files use fast-start metadata for progressive playback, with preview images under `assets/images/`.
 
-The Primitive gallery tiles nine approved clips into a continuous 3 × 3 video wall. The wall plays muted loops while visible and includes a shared play/pause button. It starts paused for visitors who prefer reduced motion. Web copies are 960 × 540 H.264 videos under `assets/videos/primitives/`, with posters under `assets/images/primitives/`.
+The Primitive gallery presents nine approved clips as individually playable videos in a responsive grid, with each primitive name shown above its video. Web copies are 960 × 540 H.264 videos under `assets/videos/primitives/`, with posters under `assets/images/primitives/`.
 
 Add media files under `assets/` and populate the corresponding array. For example:
 
