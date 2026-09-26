@@ -11,8 +11,8 @@
   <title>Crucible: Counterfactual RLVR for Dexterous Manipulation Planners</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23202228'/%3E%3Cpath d='M45 19a18 18 0 1 0 0 26' fill='none' stroke='%23ffffff' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='48' cy='14' r='5' fill='%23ca562c'/%3E%3C/svg%3E">
   <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/site.css?v=5">
-  <script src="assets/site.js?v=3" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=6">
+  <script src="assets/site.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#overview">Skip to framework overview</a>
@@ -52,8 +52,11 @@
       <div class="media-grid demo-list" data-gallery="demos"></div>
     </section>
     <section id="primitives" class="section media-section" aria-labelledby="primitives-title" hidden>
-      <h2 id="primitives-title">Primitive gallery</h2>
-      <div class="media-grid" data-gallery="primitives"></div>
+      <div class="primitive-heading">
+        <h2 id="primitives-title">Primitive gallery</h2>
+        <button class="wall-toggle" type="button" aria-controls="primitive-wall" hidden>Pause videos</button>
+      </div>
+      <div id="primitive-wall" class="media-grid primitive-wall" data-gallery="primitives"></div>
     </section>
     <section id="static-demos" class="section media-section" aria-labelledby="static-demos-title" hidden>
       <h2 id="static-demos-title">Static demo gallery</h2>

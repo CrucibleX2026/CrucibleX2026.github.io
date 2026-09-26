@@ -22,11 +22,17 @@ async function loadGalleries() {
         media.style.aspectRatio = `${item.width} / ${item.height}`;
       }
       if (item.type === "video") {
-        media.controls = true;
+        media.controls = id !== "primitives";
         media.playsInline = true;
         media.preload = "metadata";
         media.setAttribute("aria-label", item.title);
         if (item.poster) media.poster = item.poster;
+        if (id === "primitives") {
+          media.muted = true;
+          media.defaultMuted = true;
+          media.loop = true;
+          media.preload = "none";
+        }
         if (item.captions) {
           const track = document.createElement("track");
           track.kind = "captions";
@@ -41,15 +47,19 @@ async function loadGalleries() {
         media.decoding = "async";
       }
 
-      const caption = document.createElement("figcaption");
-      const title = document.createElement("strong");
-      title.textContent = item.title;
-      caption.append(title);
-      if (item.caption) caption.append(document.createTextNode(item.caption));
-      if (id === "demos") {
-        card.append(caption, media);
+      if (id === "primitives") {
+        card.append(media);
       } else {
-        card.append(media, caption);
+        const caption = document.createElement("figcaption");
+        const title = document.createElement("strong");
+        title.textContent = item.title;
+        caption.append(title);
+        if (item.caption) caption.append(document.createTextNode(item.caption));
+        if (id === "demos") {
+          card.append(caption, media);
+        } else {
+          card.append(media, caption);
+        }
       }
       grid.append(card);
     }
@@ -62,6 +72,50 @@ async function loadGalleries() {
   }
 
   document.querySelector(".section-nav").hidden = visibleSections === 0;
+  setupPrimitiveWall();
+}
+
+function setupPrimitiveWall() {
+  const wall = document.getElementById("primitive-wall");
+  const videos = [...wall.querySelectorAll("video")];
+  if (videos.length === 0) return;
+  const toggle = document.querySelector(".wall-toggle");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let playbackEnabled = !reducedMotion.matches;
+  let inView = false;
+
+  function updatePlayback() {
+    toggle.textContent = playbackEnabled ? "Pause videos" : "Play videos";
+    for (const video of videos) {
+      if (playbackEnabled && inView && !document.hidden) {
+        video.play().catch((error) => {
+          if (error.name === "NotAllowedError" && playbackEnabled) {
+            playbackEnabled = false;
+            updatePlayback();
+          }
+        });
+      } else {
+        video.pause();
+      }
+    }
+  }
+
+  toggle.hidden = false;
+  toggle.addEventListener("click", () => {
+    playbackEnabled = !playbackEnabled;
+    updatePlayback();
+  });
+  reducedMotion.addEventListener("change", () => {
+    playbackEnabled = !reducedMotion.matches;
+    updatePlayback();
+  });
+  document.addEventListener("visibilitychange", updatePlayback);
+  const observer = new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting;
+    updatePlayback();
+  }, { threshold: 0 });
+  observer.observe(wall);
+  updatePlayback();
 }
 
 loadGalleries().catch((error) => console.warn(error.message));

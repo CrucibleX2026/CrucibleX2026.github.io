@@ -28,6 +28,79 @@
       "height": 1440
     }
   ],
-  "primitives": [],
+  "primitives": [
+    {
+      "type": "video",
+      "title": "Turn knob",
+      "src": "assets/videos/primitives/coffee_knob.mp4",
+      "poster": "assets/images/primitives/coffee_knob.jpg",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "type": "video",
+      "title": "Operate lever",
+      "src": "assets/videos/primitives/coffee_lever.mp4",
+      "poster": "assets/images/primitives/coffee_lever.jpg",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "type": "video",
+      "title": "Press lever",
+      "src": "assets/videos/primitives/toaster_press.mp4",
+      "poster": "assets/images/primitives/toaster_press.jpg",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "type": "video",
+      "title": "Open door",
+      "src": "assets/videos/primitives/door_open.mp4",
+      "poster": "assets/images/primitives/door_open.jpg",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "type": "video",
+      "title": "Close door",
+      "src": "assets/videos/primitives/door_close.mp4",
+      "poster": "assets/images/primitives/door_close.jpg",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "type": "video",
+      "title": "Pull tissue",
+      "src": "assets/videos/primitives/tissue.mp4",
+      "poster": "assets/images/primitives/tissue.jpg",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "type": "video",
+      "title": "Pull drawer",
+      "src": "assets/videos/primitives/drawer.mp4",
+      "poster": "assets/images/primitives/drawer.jpg",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "type": "video",
+      "title": "Push drawer",
+      "src": "assets/videos/primitives/drawer_push.mp4",
+      "poster": "assets/images/primitives/drawer_push.jpg",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "type": "video",
+      "title": "Push object",
+      "src": "assets/videos/primitives/table_push.mp4",
+      "poster": "assets/images/primitives/table_push.jpg",
+      "width": 960,
+      "height": 540
+    }
+  ],
   "static-demos": []
 }
