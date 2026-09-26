@@ -4,8 +4,8 @@
       "type": "video",
       "title": "Chess",
       "caption": "Task: You are playing the white pieces; make your move.",
-      "src": "assets/videos/chess.mp4",
-      "poster": "assets/images/chess-poster.jpg",
+      "src": "assets/videos/chess.mp4?v=2",
+      "poster": "assets/images/chess-poster.jpg?v=2",
       "width": 2566,
       "height": 1440,
       "realWorld": {
