@@ -11,7 +11,7 @@
       "realWorld": {
         "type": "video",
         "title": "Chess (real-world)",
-        "src": "assets/videos/chess-real-2x.mp4",
+        "src": "assets/videos/chess-real-2x.mp4?v=2",
         "poster": "assets/images/chess-real-2x-poster.jpg",
         "width": 1920,
         "height": 1080,
@@ -29,7 +29,7 @@
       "realWorld": {
         "type": "video",
         "title": "Microwave (real-world)",
-        "src": "assets/videos/microwave-real-2x.mp4",
+        "src": "assets/videos/microwave-real-2x.mp4?v=2",
         "poster": "assets/images/microwave-real-2x-poster.jpg",
         "width": 1920,
         "height": 1080,
@@ -47,7 +47,7 @@
       "realWorld": {
         "type": "video",
         "title": "Piano (real-world)",
-        "src": "assets/videos/piano-real-2x.mp4",
+        "src": "assets/videos/piano-real-2x.mp4?v=2",
         "poster": "assets/images/piano-real-2x-poster.jpg",
         "width": 1920,
         "height": 1080,
