@@ -7,7 +7,16 @@
       "src": "assets/videos/chess.mp4",
       "poster": "assets/images/chess-poster.jpg",
       "width": 2566,
-      "height": 1440
+      "height": 1440,
+      "realWorld": {
+        "type": "video",
+        "title": "Chess (real-world)",
+        "src": "assets/videos/chess-real-2x.mp4",
+        "poster": "assets/images/chess-real-2x-poster.jpg",
+        "width": 1920,
+        "height": 1080,
+        "playbackSpeed": 2
+      }
     },
     {
       "type": "video",
@@ -16,7 +25,16 @@
       "src": "assets/videos/microwave.mp4",
       "poster": "assets/images/microwave-poster.jpg",
       "width": 2566,
-      "height": 1440
+      "height": 1440,
+      "realWorld": {
+        "type": "video",
+        "title": "Microwave (real-world)",
+        "src": "assets/videos/microwave-real-2x.mp4",
+        "poster": "assets/images/microwave-real-2x-poster.jpg",
+        "width": 1920,
+        "height": 1080,
+        "playbackSpeed": 2
+      }
     },
     {
       "type": "video",
@@ -25,7 +43,26 @@
       "src": "assets/videos/piano.mp4?v=2",
       "poster": "assets/images/piano-poster.jpg?v=2",
       "width": 2566,
-      "height": 1440
+      "height": 1440,
+      "realWorld": {
+        "type": "video",
+        "title": "Piano (real-world)",
+        "src": "assets/videos/piano-real-2x.mp4",
+        "poster": "assets/images/piano-real-2x-poster.jpg",
+        "width": 1920,
+        "height": 1080,
+        "playbackSpeed": 2
+      }
+    }
+  ],
+  "rollouts": [
+    {
+      "type": "video",
+      "title": "Closed-loop rollouts across twelve objects and scenes",
+      "src": "assets/videos/closed-loop-rollouts.mp4",
+      "poster": "assets/images/closed-loop-rollouts-poster.jpg",
+      "width": 3840,
+      "height": 2160
     }
   ],
   "primitives": [

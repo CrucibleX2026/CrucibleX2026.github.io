@@ -59,7 +59,8 @@ figcaption strong { color: var(--ink); font-weight: 650; }
 .media-section { margin-top: 76px; border-top: 1px solid var(--line); padding-top: 28px; }
 .media-section h2 { margin-bottom: 28px; }
 .media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
-.demo-list { width: 80%; margin-inline: auto; grid-template-columns: minmax(0, 1fr); gap: 48px; }
+.demo-list { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+.rollout-gallery { grid-template-columns: minmax(0, 1fr); }
 .media-card { min-width: 0; margin: 0; }
 .media-card img, .media-card video { display: block; width: 100%; height: auto; border-radius: 12px; background: #f4f5f7; }
 .media-card video { aspect-ratio: 16 / 9; object-fit: contain; }
@@ -67,6 +68,13 @@ figcaption strong { color: var(--ink); font-weight: 650; }
 .media-card strong { display: block; margin-bottom: 4px; }
 .demo-list .media-card figcaption { margin: 0 0 16px; }
 .demo-list .media-card strong { margin-bottom: 6px; font-size: 1.125rem; }
+.demo-pair-heading { margin-bottom: 16px; }
+.demo-pair-heading h3 { margin: 0; font-size: 1.25rem; line-height: 1.4; letter-spacing: -0.015em; }
+.demo-pair-heading p { margin: 6px 0 0; font-size: 1rem; line-height: 1.6; color: #454954; }
+.demo-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.demo-comparison .media-card figcaption { display: flex; align-items: center; min-height: 28px; margin: 0 0 12px; }
+.demo-comparison .media-card strong { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 1rem; }
+.playback-badge { display: inline-block; padding: 2px 9px; border-radius: 999px; background: #f9ece5; color: #9c3e20; font-size: 0.75rem; font-weight: 600; line-height: 1.6; white-space: nowrap; }
 .primitive-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 22px; }
 .primitive-gallery .media-card figcaption { margin: 0 0 10px; }
 .primitive-gallery .media-card strong { font-size: 1.0625rem; }
@@ -82,6 +90,7 @@ figcaption strong { color: var(--ink); font-weight: 650; }
   h2 { font-size: 1.25rem; }
   figcaption { margin-top: 22px; font-size: 1rem; line-height: 1.75; }
   .media-grid { grid-template-columns: 1fr; gap: 28px; }
+  .demo-comparison { grid-template-columns: 1fr; gap: 24px; }
   .primitive-gallery { grid-template-columns: 1fr; gap: 28px; }
   .media-section { margin-top: 48px; padding-top: 24px; }
   .site-footer { margin-top: 40px; padding-bottom: 24px; }

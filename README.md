@@ -11,9 +11,11 @@ Run `python3 -m http.server 4173 --bind 127.0.0.1` from this directory, then ope
 - `index.html`: paper title and framework figure caption.
 - `assets/crucible-overview.png`: the paper's original framework figure.
 - `assets/site.css`: responsive page styles.
-- `content/media.json`: demo videos, primitive gallery, and static demo gallery. A section becomes visible when its array contains media.
+- `content/media.json`: demo videos, closed-loop rollouts, primitive gallery, and static demo gallery. A section becomes visible when its array contains media.
 
-The demo videos appear in the order Chess, Microwave, Piano. They are stacked vertically, centered at 80% of the content width, with each title and task description above its video. Task descriptions are transcribed from the opening frames. The MP4 files use fast-start metadata for progressive playback, with preview images under `assets/images/`.
+The demo tasks appear in the order Chess, Microwave, Piano, with a title and task description above each pair. Each row compares the simulation on the left with its real-world recording on the right; narrow screens stack the pair vertically. Real-world recordings are encoded at 2× speed, including audio, and carry a visible speed label. The `realWorld` object in each demo entry defines the paired video; `playbackSpeed` labels its encoded speed. The MP4 files use fast-start metadata for progressive playback, with preview images under `assets/images/`.
+
+The closed-loop rollout video wall appears after the demos at the full content width. It preserves the uploaded 3840 × 2160 video and its 3 × 4 composition, with playback controls, looping, and a preview image.
 
 The Primitive gallery presents nine approved clips as individually playable videos in a responsive grid, with each primitive name shown above its video. Web copies are 960 × 540 H.264 videos under `assets/videos/primitives/`, with posters under `assets/images/primitives/`.
 
